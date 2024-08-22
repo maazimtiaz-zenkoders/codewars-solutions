@@ -34,6 +34,7 @@ let array2 = [0, 0, 0.55, 0, 0];
         console.log("Unique Number in Array 2 is:",findUniqueNumber(array2));
     }
 
+
 /*PROBLEM LINK/URL*/
 /*https://www.codewars.com/kata/585d7d5adb20cf33cb000235*/
 
