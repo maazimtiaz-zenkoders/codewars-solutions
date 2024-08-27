@@ -25,20 +25,20 @@ sum(100) // 190569292
 See here for more examples.*/
 
 /*SOLUTION*/
-function countPartition(num){
-    let result = [];
-    
-    for(let i=0;i<=num;i++){
-        result[i] = 0;
+function countPartition(num) {
+  let result = [];
+
+  for (let i = 0; i <= num; i++) {
+    result[i] = 0;
+  }
+  result[0] = 1;
+
+  for (let i = 1; i <= num; i++) {
+    for (let j = i; j <= num; j++) {
+      result[j] += result[j - i];
     }
-    result[0] = 1;
-    
-    for(let i=1;i<=num;i++){
-        for(let j=i;j<=num;j++){
-            result[j] += result[j-i];
-        }
-    }
-    return result[num];
+  }
+  return result[num];
 }
 
 console.log(countPartition(1));
